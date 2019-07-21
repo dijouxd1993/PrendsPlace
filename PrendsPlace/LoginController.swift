@@ -1,9 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBOutlet weak var loginField: UITextField!
@@ -13,13 +12,11 @@ class ViewController: UIViewController {
     @IBAction func connection(_ sender: Any) {
         let url = URL(string: "http://192.168.1.21:8080/login")
         
-        //var success = false
-        
         if let url = url {
             var request = URLRequest.init(url: url as URL)
             request.httpMethod = "POST"
             
-            var body = "username=" + loginField.text! + "&password=" + passwordField.text!
+            let body = "username=" + loginField.text! + "&password=" + passwordField.text!
 
             request.httpBody = body.data(using: .utf8)
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -29,14 +26,22 @@ class ViewController: UIViewController {
                 
                 if let response = response {
                     if response.statusCode == 200 {
-                        self.performSegue(withIdentifier: "loginToMain", sender: self)
+                        DispatchQueue.main.sync {
+                            self.performSegue(withIdentifier: "loginToMain", sender: self)
+                        }
                     } else {
-                        self.responseLabel.isHidden = false
-                    }                    
+                        DispatchQueue.main.sync {
+                            self.responseLabel.isHidden = false
+                        }
+                    }
                 }
             })
             
             task.resume()
         }
     }
+    
+    
+    
+    
 }

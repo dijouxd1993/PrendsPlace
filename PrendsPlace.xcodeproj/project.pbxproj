@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B153DC922E83339007AFE44 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B153DC822E83339007AFE44 /* Global.swift */; };
+		8B153DCB22E84BBA007AFE44 /* ProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B153DCA22E84BBA007AFE44 /* ProfilController.swift */; };
 		8B24E68A22A6805800B7F2C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E68922A6805800B7F2C1 /* AppDelegate.swift */; };
 		8B24E68C22A6805800B7F2C1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E68B22A6805800B7F2C1 /* LoginController.swift */; };
 		8B24E68F22A6805800B7F2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B24E68D22A6805800B7F2C1 /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		8B24E69422A6805A00B7F2C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B24E69222A6805A00B7F2C1 /* LaunchScreen.storyboard */; };
 		8B24E69F22A6805A00B7F2C1 /* PrendsPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E69E22A6805A00B7F2C1 /* PrendsPlaceTests.swift */; };
 		8B24E6AA22A6805A00B7F2C1 /* PrendsPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E6A922A6805A00B7F2C1 /* PrendsPlaceUITests.swift */; };
+		8B26809922E8A388003B5E28 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26809822E8A388003B5E28 /* CreateEventController.swift */; };
+		8B6C9A6022E746B80060D80C /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C9A5F22E746B80060D80C /* EventsController.swift */; };
+		8B6C9A6222E7628C0060D80C /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C9A6122E7628C0060D80C /* SignInController.swift */; };
 		8B7EF76722DB8CAD0022609F /* InterestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF76622DB8CAD0022609F /* InterestsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B153DC822E83339007AFE44 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		8B153DCA22E84BBA007AFE44 /* ProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilController.swift; sourceTree = "<group>"; };
 		8B24E68622A6805800B7F2C1 /* PrendsPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrendsPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B24E68922A6805800B7F2C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B24E68B22A6805800B7F2C1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,9 @@
 		8B24E6A522A6805A00B7F2C1 /* PrendsPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrendsPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B24E6A922A6805A00B7F2C1 /* PrendsPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrendsPlaceUITests.swift; sourceTree = "<group>"; };
 		8B24E6AB22A6805A00B7F2C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B26809822E8A388003B5E28 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
+		8B6C9A5F22E746B80060D80C /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		8B6C9A6122E7628C0060D80C /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		8B7EF76622DB8CAD0022609F /* InterestsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +116,11 @@
 				8B24E69222A6805A00B7F2C1 /* LaunchScreen.storyboard */,
 				8B24E69522A6805A00B7F2C1 /* Info.plist */,
 				8B7EF76622DB8CAD0022609F /* InterestsController.swift */,
+				8B6C9A5F22E746B80060D80C /* EventsController.swift */,
+				8B6C9A6122E7628C0060D80C /* SignInController.swift */,
+				8B153DC822E83339007AFE44 /* Global.swift */,
+				8B153DCA22E84BBA007AFE44 /* ProfilController.swift */,
+				8B26809822E8A388003B5E28 /* CreateEventController.swift */,
 			);
 			path = PrendsPlace;
 			sourceTree = "<group>";
@@ -259,9 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B26809922E8A388003B5E28 /* CreateEventController.swift in Sources */,
 				8B24E68C22A6805800B7F2C1 /* LoginController.swift in Sources */,
 				8B24E68A22A6805800B7F2C1 /* AppDelegate.swift in Sources */,
+				8B153DC922E83339007AFE44 /* Global.swift in Sources */,
+				8B6C9A6022E746B80060D80C /* EventsController.swift in Sources */,
+				8B6C9A6222E7628C0060D80C /* SignInController.swift in Sources */,
 				8B7EF76722DB8CAD0022609F /* InterestsController.swift in Sources */,
+				8B153DCB22E84BBA007AFE44 /* ProfilController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

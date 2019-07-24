@@ -28,6 +28,8 @@ class LoginController: UIViewController {
                     if response.statusCode == 200 {
                         DispatchQueue.main.sync {
                             self.performSegue(withIdentifier: "loginToMain", sender: self)
+                            
+                            Global.saveSession(username: self.loginField.text!, password: self.passwordField.text!)
                         }
                     } else {
                         DispatchQueue.main.sync {
@@ -40,8 +42,4 @@ class LoginController: UIViewController {
             task.resume()
         }
     }
-    
-    
-    
-    
 }

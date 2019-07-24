@@ -1,6 +1,6 @@
 import UIKit
 
-class InterestsController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class EventsController: UIViewController,UITableViewDataSource {
     var rows: [String] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,16 +17,21 @@ class InterestsController: UIViewController,UITableViewDataSource,UITableViewDel
         return cell
     }
     
-    @IBOutlet weak var interestsTable: UITableView!
+    @IBOutlet weak var eventsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://192.168.1.21:8080/interests")
+        let url = URL(string: "http://192.168.1.21:8080/events")
         
         if let url = url {
             var request = URLRequest.init(url: url as URL)
             request.httpMethod = "GET"
+            
+            /*let body = "name=francois&password=okok"
+            
+            request.httpBody = body.data(using: .utf8)
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")*/
             
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
                 do {
@@ -45,23 +50,10 @@ class InterestsController: UIViewController,UITableViewDataSource,UITableViewDel
             task.resume()
         }
         
-        interestsTable.dataSource = self
-        interestsTable.delegate = self
+        eventsTable.dataSource = self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var cell: UITableViewCell = tableView.visibleCells[indexPath.row]
-        
-        if cell.isSelected {
-            //print("selected")
-            cell.backgroundColor = UIColor.red
-        } else {
-            cell.backgroundColor = UIColor.green
-            //print("unselected")
-        }
     }
 }

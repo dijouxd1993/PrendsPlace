@@ -29,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="francois" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MO-Bs-Zg3">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MO-Bs-Zg3">
                                 <rect key="frame" x="74" y="278" width="227" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -51,12 +51,12 @@
                                     <action selector="connection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eu-kP-REP"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="okok" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-cQ-B8a">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-cQ-B8a">
                                 <rect key="frame" x="74" y="363" width="227" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Identifiants invalides !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83u-CW-3Pg">
                                 <rect key="frame" x="95" y="516" width="184" height="43"/>
@@ -104,7 +104,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vXO-B1-Sqb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="vXO-B1-Sqb">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXO-B1-Sqb" id="T0i-hK-kzd">
@@ -132,7 +132,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Evènements" id="XIc-ZT-azA"/>
                     <connections>
-                        <outlet property="eventsTable" destination="RZz-aL-AKf" id="VHU-0h-HfL"/>
+                        <outlet property="eventsTable" destination="RZz-aL-AKf" id="WeF-90-fe4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGi-w1-R1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +219,7 @@
                         <outlet property="dateField" destination="VSp-Tz-1MB" id="qJd-Rb-ckg"/>
                         <outlet property="locationField" destination="eof-Kc-KxJ" id="4KW-06-P5w"/>
                         <outlet property="nameField" destination="BHY-ej-FIy" id="sAV-TS-ikn"/>
-                        <segue destination="NCN-qq-Ycw" kind="show" identifier="createEventToEvents" id="uaE-8M-ZrH"/>
+                        <segue destination="NCN-qq-Ycw" kind="show" identifier="createEventToEvents" id="sGe-sr-zY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOi-NL-d8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,8 +318,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tTa-ZK-t56" kind="relationship" relationship="viewControllers" id="Aob-Eh-XW9"/>
                         <segue destination="NCN-qq-Ycw" kind="relationship" relationship="viewControllers" id="Vkp-tk-WL4"/>
+                        <segue destination="tTa-ZK-t56" kind="relationship" relationship="viewControllers" id="Aob-Eh-XW9"/>
                         <segue destination="Uha-8X-rJv" kind="relationship" relationship="viewControllers" id="c7j-ls-im4"/>
                     </connections>
                 </tabBarController>
@@ -400,7 +400,7 @@
         <image name="Logo" width="418.90908813476562" height="418.90908813476562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JLa-QH-VoT"/>
+        <segue reference="sGe-sr-zY5"/>
         <segue reference="E3A-N6-82K"/>
     </inferredMetricsTieBreakers>
 </document>

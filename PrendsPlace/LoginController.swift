@@ -10,7 +10,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var responseLabel: UILabel!
     
     @IBAction func connection(_ sender: Any) {
-        let url = URL(string: "http://192.168.1.21:8080/login")
+        let url = URL(string: "http://10.33.255.41:8080/login")
         
         if let url = url {
             var request = URLRequest.init(url: url as URL)

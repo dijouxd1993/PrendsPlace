@@ -19,19 +19,15 @@ class EventsController: UIViewController,UITableViewDataSource {
     
     @IBOutlet weak var eventsTable: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://192.168.1.21:8080/events")
+        let url = URL(string: "http://10.33.255.41:8080/events")
         
         if let url = url {
             var request = URLRequest.init(url: url as URL)
             request.httpMethod = "GET"
-            
-            /*let body = "name=francois&password=okok"
-            
-            request.httpBody = body.data(using: .utf8)
-            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")*/
             
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
                 do {

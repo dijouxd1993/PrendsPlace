@@ -5,6 +5,8 @@ struct Global {
     static var password = ""
     static var userId: Int = -1
     
+    //static var interests: [String] = []
+    
     static func saveSession(username: String, password: String) -> Void {
         Global.username = username
         Global.password = password
@@ -13,7 +15,7 @@ struct Global {
     }
     
     static func setUserId(username: String) -> Void {
-        let url = URL(string: "http://192.168.1.21:8080/users")
+        let url = URL(string: "http://10.33.255.41:8080/users")
     
         if let url = url {
             var request = URLRequest.init(url: url as URL)
@@ -42,4 +44,6 @@ struct Global {
         Global.password = ""
         Global.userId = -1
     }
+    
+    //static func getInterests()
 }

@@ -22,7 +22,7 @@ class InterestsController: UIViewController,UITableViewDataSource,UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://192.168.1.21:8080/interests")
+        let url = URL(string: "http://10.33.255.41:8080/interests")
         
         if let url = url {
             var request = URLRequest.init(url: url as URL)
